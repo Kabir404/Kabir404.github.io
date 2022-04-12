@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Fira-Sans');
+body {
+    background-color: #282c34;
+    color: #abb2bf;
+    font-family: "Fira Sans";
+    text-align: center
+}
+h1 {
+    color: #98c379;
+    text-shadow: 1px 2px 2px#14161a;
+}
+a {
+    color: #61afef;
+}
+
+button {
+    background-color: #61afef; /* Green */
+    border: none; 
+    color: #282c34;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 3px 3px 3px black;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Kabir's personal space!</title>
+            <link type="text/css" rel="stylesheet" href="./css/styles.css">
+            <script type="text/javascript" href="./js/md-reader/Markdown.Converter.js"></script>
+            <script type="text/javascript">
+            
+            var blogfile = null;
+
+			function getArgs()
+            {
+                var parameters = location.search.substring(1).split("&");
+
+                var temp = parameters[0].split("=");
+                file = unescape(temp[1]);
+                document.getElementById("loadmd").innerHTML = blogfile;
+            }
+			function parseFile() {
+
+                var converter = new Markdown.Converter();
+                var html = converter.makeHtml(fileLoadevent.target.result);
+                file = blogfile
+                document.getElementById('output').innerHTML = html;
+
+			}
+            function windowOnLoad() {
+				if (window.File && window.FileReader && window.FileList && window.Blob) {
+					// Everything we need is available
+					getArgs();
+					parseFile();
+				} else {
+					alert('The File APIs are not fully supported in this browser.');
+				}
+            }
+            window.onload = windowOnLoad();
+            </script>
+        </head>
+    <body>
+        <h1>Welcome to Kabir404!</h1>
+        <p>You could think this site as a place for Kabir Akzaman to sit down and write some stuff!</p>
+        <div id="output">
+		</div>
+    </body>
+</html> 
